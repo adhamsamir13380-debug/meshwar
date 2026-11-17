@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="blue-white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="description" content="مِشوار — منصتك الذكية لتنظيم المذاكرة والجداول الدراسية ومتابعة الامتحانات، خطوة بخطوة نحو النجاح.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiMyNTYzZWIiLz48cGF0aCBkPSJNOCA2NCAyMyAzNmgxOGwxNSAyOEg4WiIgZmlsbD0iIzBmMWYzYiIvPjxwYXRoIGQ9Ik0yNyA2NCAzMCAzOWg0bDMgMjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1kYXNoYXJyYXk9IjUgNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTI3IDI0aDEwdjVhNSA1IDAgMCAxLTEwIDB2LTVabS0zIDFoM3Y0aC0zYTIgMiAwIDAgMSAwLTRabTE2IDBoLTN2NGgzYTIgMiAwIDAgMCAwLTRaIiBmaWxsPSIjZmZkMTY2Ii8+PHBhdGggZD0iTTMwIDM0djRtNC00djRtLTcgMmgxMCIgc3Ryb2tlPSIjZmZkMTY2IiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTMyIDYgMzUgMTJsNyAxLTUgNSAxIDctNi0zLTYgMyAxLTctNS01IDctMSAzLTZaIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuOTUiLz48L3N2Zz4=">
+    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiMyNTYzZWIiLz48cGF0aCBkPSJNOCA2NCAyMyAzNmgxOGwxNSAyOEg4WiIgZmlsbD0iIzBmMWYzYiIvPjxwYXRoIGQ9Ik0yNyA2NCAzMCAzOWg0bDMgMjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1kYXNoYXJyYXk9IjUgNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTI3IDI0aDEwdjVhNSA1IDAgMCAxLTEwIDB2LTVabS0zIDFoM3Y0aC0zYTIgMiAwIDAgMSAwLTRabTE2IDBoLTN2NGgzYTIgMiAwIDAgMCAwLTRaIiBmaWxsPSIjZmZkMTY2Ii8+PHBhdGggZD0iTTMwIDM0djRtNC00djRtLTcgMmgxMCIgc3Ryb2tlPSIjZmZkMTY2IiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTMyIDYgMzUgMTJsNyAxLTUgNSAxIDctNi0zLTYgMyAxLTctNS01IDctMSAzLTZaIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIuOTUiLz48L3N2Zz4=">
+    <meta property="og:title" content="مِشوار MESHWAR | كل خطوة تقرّبك من النجاح">
+    <meta property="og:description" content="نظّم مذاكرتك، تابع تقدمك، واستعد لامتحاناتك بذكاء.">
+    <title>مِشوار MESHWAR | كل خطوة تقرّبك من النجاح</title>
+    
+    <!-- Google Fonts: Cairo & Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* =========================================
+           CSS Variables & Dual Theme Architecture
+           ========================================= */
+        :root[data-theme="blue-white"] {
+            --bg-main: #f4f7fb;
+            --bg-card: #ffffff;
+            --bg-card-secondary: #eef4fc;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --accent-primary: #2563eb;
+            --accent-hover: #1d4ed8;
+            --accent-soft: rgba(37, 99, 235, 0.12);
+            --accent-glow: rgba(37, 99, 235, 0.35);
+            --border-color: #e2e8f0;
+            --header-bg: rgba(255, 255, 255, 0.88);
+            --btn-text: #ffffff;
+            --badge-bg: #dbeafe;
+            --badge-text: #1e40af;
+            --book-cover: linear-gradient(135deg, #1d4ed8, #3b82f6);
+            --book-spine: #1e3a8a;
+        }
+
+        :root[data-theme="black-gold"] {
+            --bg-main: #09090b;
+            --bg-card: #141417;
+            --bg-card-secondary: #1c1c21;
+            --text-primary: #fafafa;
+            --text-secondary: #d4d4d8;
+            --text-muted: #a1a1aa;
+            --accent-primary: #d4af37;
+            --accent-hover: #f59e0b;
+            --accent-soft: rgba(212, 175, 55, 0.14);
+            --accent-glow: rgba(212, 175, 55, 0.35);
+            --border-color: #27272a;
+            --header-bg: rgba(20, 20, 23, 0.88);
+            --btn-text: #09090b;
+            --badge-bg: rgba(212, 175, 55, 0.18);
+            --badge-text: #fbbf24;
+            --book-cover: linear-gradient(135deg, #18181b, #27272a);
+            --book-spine: #d4af37;
+        }
+
+        * {
+            font-family: 'Cairo', 'Tajawal', sans-serif;
+            box-sizing: border-box;
+            transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            margin: 0;
+        }
+
+        /* =========================================
+           3D Opening Book Intro Screen Styles
+           ========================================= */
+        #intro-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: radial-gradient(circle at center, #0f172a 0%, #020617 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.75s ease;
+        }
+
+        #intro-overlay.fade-out {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .book-scene {
+            perspective: 1400px;
+            width: 220px;
+            height: 280px;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .book-3d {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateX(14deg) rotateY(-12deg);
+            animation: bookFloat 3s ease-in-out infinite;
+        }
+
+        /* Back Cover */
+        .book-back {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #1e3a8a, #1d4ed8);
+            border-radius: 6px 16px 16px 6px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.65);
+            border: 2px solid #60a5fa;
+        }
+
+        /* Inner Pages */
+        .book-pages {
+            position: absolute;
+            top: 8px;
+            bottom: 8px;
+            left: 10px;
+            right: 6px;
+            background: #f8fafc;
+            border-radius: 4px 12px 12px 4px;
+            box-shadow: inset 8px 0 15px rgba(0,0,0,0.12);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            text-align: center;
+            color: #0f172a;
+        }
+
+        .page-lines {
+            width: 100%;
+            height: 6px;
+            background: #cbd5e1;
+            border-radius: 4px;
+            margin: 6px 0;
+        }
+
+        /* Animated Flipping Page */
+        .book-page-flip {
+            position: absolute;
+            top: 8px;
+            bottom: 8px;
+            left: 10px;
+            right: 8px;
+            background: #ffffff;
+            border-radius: 4px 12px 12px 4px;
+            transform-origin: left center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            animation: flipInnerPage 2.5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+            animation-delay: 0.9s;
+        }
+
+        .book-page-flip-2 {
+            position: absolute;
+            top: 8px;
+            bottom: 8px;
+            left: 10px;
+            right: 8px;
+            background: #f1f5f9;
+            border-radius: 4px 12px 12px 4px;
+            transform-origin: left center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            animation: flipInnerPage 2.3s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+            animation-delay: 1.5s;
+        }
+
+        /* Front Cover */
+        .book-front {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(145deg, #2563eb, #1e40af);
+            border-radius: 6px 16px 16px 6px;
+            transform-origin: left center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border: 2px solid #93c5fd;
+            box-shadow: inset 12px 0 20px rgba(0,0,0,0.25);
+            animation: openBookCover 2.4s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+            animation-delay: 0.5s;
+            backface-visibility: visible;
+        }
+
+        @keyframes openBookCover {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(-160deg); }
+        }
+
+        @keyframes flipInnerPage {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(-150deg); }
+        }
+
+        @keyframes bookFloat {
+            0%, 100% { transform: rotateX(14deg) rotateY(-10deg) translateY(0px); }
+            50% { transform: rotateX(10deg) rotateY(-6deg) translateY(-10px); }
+        }
+
+        .intro-progress-bar {
+            width: 280px;
+            height: 7px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 999px;
+            overflow: hidden;
+            margin-top: 1.25rem;
+        }
+
+        .intro-progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #38bdf8, #fbbf24, #34d399);
+            border-radius: 999px;
+            animation: fillIntroBar 4.5s ease-in-out forwards;
+        }
+
+        @keyframes fillIntroBar {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        /* =========================================
+           Custom UI Utilities
+           ========================================= */
+        .theme-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        .theme-card-secondary {
+            background-color: var(--bg-card-secondary);
+            border: 1px solid var(--border-color);
+        }
+
+        .theme-btn-primary {
+            background-color: var(--accent-primary);
+            color: var(--btn-text);
+            box-shadow: 0 4px 14px 0 var(--accent-glow);
+        }
+
+        .theme-btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        .theme-input {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .theme-input:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px var(--accent-soft);
+        }
+
+        .accent-text {
+            color: var(--accent-primary);
+        }
+
+        .accent-bg-soft {
+            background-color: var(--accent-soft);
+        }
+
+        .glass-header {
+            background-color: var(--header-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-main);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-primary);
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 0 0 var(--accent-glow); }
+            50% { box-shadow: 0 0 0 8px rgba(0,0,0,0); }
+        }
+        .pulse-glow {
+            animation: pulseGlow 2.2s infinite;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- =================================================================
+         1. ONE-TIME 3D BOOK INTRO OVERLAY (دخلة الموقع المطولة - تظهر مرة واحدة)
+         ================================================================= -->
+    <div id="intro-overlay" aria-hidden="true">
+        <div class="book-scene">
+            <div class="book-3d">
+                <!-- Back Cover -->
+                <div class="book-back"></div>
+                <!-- Inner Pages Revealed -->
+                <div class="book-pages">
+                    <i class="fa-solid fa-graduation-cap text-3xl text-blue-600 mb-2"></i>
+                    <p class="font-extrabold text-sm text-slate-800">خطتك نحو التفوق</p>
+                    <div class="page-lines"></div>
+                    <div class="page-lines w-4/5"></div>
+                    <div class="page-lines w-3/5"></div>
+                    <div class="mt-2 flex items-center gap-1 text-[10px] font-bold text-blue-700 bg-blue-100 px-2 py-0.5 rounded-full">
+                        <i class="fa-solid fa-calendar-check"></i> خطتك اليومية بالتواريخ
+                    </div>
+                    <span class="mt-1.5 text-[10px] font-bold text-amber-700 bg-amber-100 px-2.5 py-0.5 rounded-full">المبرمج أدهم سمير</span>
+                </div>
+                <!-- Flipping Pages -->
+                <div class="book-page-flip-2"></div>
+                <div class="book-page-flip"></div>
+                <!-- Front Cover -->
+                <div class="book-front text-white text-center">
+                    <div class="w-16 h-16 rounded-2xl bg-white/15 flex items-center justify-center mb-3 border border-white/30 shadow-inner">
+                        <i class="fa-solid fa-book-open text-3xl text-amber-300"></i>
+                    </div>
+                    <h2 class="font-black text-xl tracking-wide">منظم المذاكرة</h2>
+                    <p class="text-xs text-blue-200 mt-1">بوابتك الذكية للتفوق الدراسي</p>
+                    <div class="mt-6 pt-2.5 border-t border-white/20 w-full text-xs text-amber-300 font-extrabold">
+                        تصميم: المبرمج أدهم سمير
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="text-white text-2xl md:text-4xl font-black tracking-tight text-center px-4">
+            أهلاً بك في <span class="text-amber-400">مِشوار MESHWAR</span>
+        </h1>
+        <p class="text-slate-300 text-sm md:text-base mt-2 text-center px-4">
+            جدول يومي بالتواريخ • عداد تنازلي للامتحانات • تذكيرات اختيارية
+        </p>
+        <div class="intro-progress-bar">
+            <div class="intro-progress-fill"></div>
+        </div>
+    </div>
+
+    <!-- =================================================================
+         2. TOP NAVIGATION BAR & DUAL THEME SWITCHER
+         ================================================================= -->
+    <header class="glass-header sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center justify-between gap-3">
+            <!-- Brand Logo & Title -->
+            <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-2xl theme-btn-primary flex items-center justify-center shadow-md overflow-hidden" aria-label="شعار مشوار">
+                    <svg viewBox="0 0 64 64" class="w-9 h-9" role="img" aria-hidden="true"><path d="M5 64 22 35h20l17 29H5Z" fill="#0f1f3b"/><path d="m29 64 3-27h2l3 27" fill="none" stroke="#fff" stroke-width="2.5" stroke-dasharray="5 4" stroke-linecap="round"/><path d="M25 19h14v6a7 7 0 0 1-14 0v-6Zm-4 2h4v5h-4a2.5 2.5 0 0 1 0-5Zm22 0h-4v5h4a2.5 2.5 0 0 0 0-5Z" fill="#ffd166"/><path d="M30 33v4m4-4v4m-7 3h10" stroke="#ffd166" stroke-width="2.5" stroke-linecap="round"/></svg>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <h1 class="text-base sm:text-xl font-black leading-tight">مِشوار <span dir="ltr">MESHWAR</span></h1>
+                    </div>
+                    <p class="text-xs font-semibold" style="color: var(--text-muted);">
+                        تطوير: <span class="accent-text font-bold">المبرمج أدهم سمير</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Logged-in Student Pill (Visible when logged in) -->
+            <div id="header-student-info" class="hidden md:flex items-center gap-2.5 px-3.5 py-1.5 rounded-2xl theme-card-secondary text-xs font-bold">
+                <i class="fa-solid fa-user-graduate accent-text text-sm"></i>
+                <span id="header-student-name">الطالب</span>
+                <span class="opacity-40">|</span>
+                <span id="header-student-grade" class="accent-text">المرحلة</span>
+            </div>
+
+            <!-- Controls: Theme Switcher + Profile/Logout -->
+            <div class="flex items-center gap-2 sm:gap-2.5">
+                <!-- Dual Color Theme Switcher (أبيض وأزرق / أسود وذهبي) -->
+                <div class="p-1 rounded-2xl theme-card-secondary flex items-center gap-1" role="group" aria-label="تغيير ألوان الموقع">
+                    <button id="btn-theme-blue" onclick="setTheme('blue-white')" 
+                        class="px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer">
+                        <span class="w-2.5 h-2.5 rounded-full bg-blue-600 border border-white inline-block"></span>
+                        <span>أبيض وأزرق</span>
+                    </button>
+                    <button id="btn-theme-gold" onclick="setTheme('black-gold')" 
+                        class="px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer">
+                        <span class="w-2.5 h-2.5 rounded-full bg-amber-400 border border-black inline-block"></span>
+                        <span>أسود وذهبي</span>
+                    </button>
+                </div>
+
+                <!-- Edit Profile / Logout Button -->
+                <button id="header-logout-btn" onclick="openProfileEdit()" 
+                    class="hidden p-2 sm:px-3 sm:py-2 rounded-2xl theme-card hover:opacity-80 text-xs font-bold items-center gap-1.5 cursor-pointer"
+                    title="تعديل بيانات الطالب أو تسجيل الخروج">
+                    <i class="fa-solid fa-user-pen accent-text text-sm"></i>
+                    <span class="hidden lg:inline">ملفي</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- =================================================================
+         3. STUDENT LOGIN & ACADEMIC PROFILE ONBOARDING VIEW
+         ================================================================= -->
+    <section id="login-view" class="flex-grow max-w-4xl w-full mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div class="theme-card rounded-3xl p-6 sm:p-10 shadow-xl space-y-6">
+            <div class="text-center space-y-2">
+                <div class="w-16 h-16 mx-auto rounded-3xl theme-btn-primary flex items-center justify-center text-3xl shadow-lg mb-3">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-extrabold" style="background-color: var(--badge-bg); color: var(--badge-text);">
+                    <i class="fa-solid fa-sparkles"></i> الخطوة الأولى: إعداد ملفك الدراسي الذكي
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-black">سجّل دخولك وابدأ رحلة التفوق</h2>
+                <p class="text-xs sm:text-sm max-w-xl mx-auto" style="color: var(--text-secondary);">
+                    أدخل اسمك واختر مرحلتك الدراسية ومسارك لتظهر لك موادك المقررة تلقائياً مع العداد التنازلي للامتحانات.
+                </p>
+            </div>
+
+            <form id="onboarding-form" onsubmit="handleStudentLogin(event)" class="space-y-6">
+                <!-- Step 1: Student Name -->
+                <div>
+                    <label class="block text-sm font-extrabold mb-2">
+                        <i class="fa-solid fa-signature accent-text ml-1"></i> اسم الطالب بالكامل <span class="text-rose-500">*</span>
+                    </label>
+                    <input type="text" id="login-student-name" required placeholder="اكتب اسمك هنا (مثال: أحمد محمد)..."
+                        class="theme-input w-full px-4 py-3.5 rounded-2xl text-sm sm:text-base font-bold">
+                </div>
+
+                <!-- Step 2: Academic Stage Selection -->
+                <div>
+                    <label class="block text-sm font-extrabold mb-2">
+                        <i class="fa-solid fa-school accent-text ml-1"></i> اختر مرحلتك الدراسية <span class="text-rose-500">*</span>
+                    </label>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3" id="grade-selection-grid">
+                        <!-- Grades injected via JS -->
+                    </div>
+                </div>
+
+                <!-- Step 3A: Baccalaureate Track Selection (Shows ONLY for أولى بكالوريا / تانية بكالوريا) -->
+                <div id="bac-track-container" class="hidden space-y-2.5 p-4 sm:p-5 rounded-3xl theme-card-secondary border-2" style="border-color: var(--accent-primary);">
+                    <label class="block text-sm font-extrabold">
+                        <i class="fa-solid fa-compass accent-text ml-1"></i> اختر مسار البكالوريا المصرية <span class="text-rose-500">*</span>
+                    </label>
+                    <p class="text-xs" style="color: var(--text-muted);">اختر مسارك التخصصي لتحديد المواد المقررة عليك تلقائياً:</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1" id="bac-tracks-grid">
+                        <!-- 4 Bac tracks injected via JS -->
+                    </div>
+                </div>
+
+                <!-- Step 3B: 3rd Secondary Branch Selection (Shows ONLY for تالتة ثانوي) -->
+                <div id="sec3-branch-container" class="hidden space-y-2.5 p-4 sm:p-5 rounded-3xl theme-card-secondary border-2" style="border-color: var(--accent-primary);">
+                    <label class="block text-sm font-extrabold">
+                        <i class="fa-solid fa-sitemap accent-text ml-1"></i> اختر شعبة الثانوية العامة <span class="text-rose-500">*</span>
+                    </label>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1" id="sec3-branches-grid">
+                        <!-- 3 Branches injected via JS -->
+                    </div>
+                </div>
+
+                <!-- Step 4: Subjects Preview & Customization -->
+                <div id="login-subjects-preview" class="hidden space-y-3">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <label class="text-sm font-extrabold">
+                            <i class="fa-solid fa-books accent-text ml-1"></i> المواد المقررة عليك (يمكنك تحديد أو إلغاء أي مادة):
+                        </label>
+                        <div class="flex items-center gap-2">
+                            <input type="text" id="custom-subject-input" placeholder="أضف مادة إضافية..."
+                                class="theme-input px-3 py-1.5 rounded-xl text-xs font-bold">
+                            <button type="button" onclick="addCustomLoginSubject()" 
+                                class="theme-btn-primary px-3 py-1.5 rounded-xl text-xs font-extrabold cursor-pointer">
+                                + إضافة
+                            </button>
+                        </div>
+                    </div>
+                    <div id="login-subjects-chips" class="flex flex-wrap gap-2">
+                        <!-- Subject chips rendered dynamically -->
+                    </div>
+                </div>
+
+                <!-- Optional Notifications Permission -->
+                <div class="p-4 sm:p-5 rounded-3xl border space-y-2" style="background-color: var(--accent-soft); border-color: var(--accent-primary);">
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-2xl theme-btn-primary flex items-center justify-center text-lg shrink-0">
+                            <i class="fa-solid fa-bell"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-black text-sm">تذكيرات مِشوار (اختياري)</h3>
+                            <p class="text-xs mt-1" style="color: var(--text-secondary);">يمكنك السماح بإشعارات المذاكرة والأذكار الآن أو تفعيلها لاحقًا من لوحة التحكم. السماح ليس شرطًا لإنشاء الحساب.</p>
+                        </div>
+                        <button type="button" onclick="requestNotificationPermission()" class="theme-btn-primary px-3 py-2 rounded-xl text-xs font-extrabold cursor-pointer shrink-0">تفعيل الإشعارات</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="theme-btn-primary w-full py-4 rounded-2xl font-black text-base sm:text-lg flex items-center justify-center gap-2.5 cursor-pointer shadow-xl">
+                    <span>دخول إلى لوحة المذاكرة الذكية</span>
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- =================================================================
+         4. MAIN DASHBOARD VIEW (Shown after Login)
+         ================================================================= -->
+    <main id="dashboard-view" class="hidden flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-7">
+
+        <!-- TOP LIVE EXAM COUNTDOWN BANNER (العداد التنازلي الحي للامتحانات) -->
+        <section class="theme-card rounded-3xl p-5 sm:p-7 relative overflow-hidden border-2" style="border-color: var(--accent-primary);">
+            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+                <!-- Student Welcome & Exam Info -->
+                <div class="space-y-2">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="px-3 py-1 rounded-full text-xs font-extrabold" style="background-color: var(--badge-bg); color: var(--badge-text);">
+                            <i class="fa-solid fa-graduation-cap ml-1"></i> <span id="dash-grade-badge">المرحلة الدراسية</span>
+                        </span>
+                        <span id="dash-track-badge" class="hidden px-3 py-1 rounded-full text-xs font-extrabold bg-amber-500/15 text-amber-500">
+                            المسار
+                        </span>
+                    </div>
+                    <h2 class="text-xl sm:text-2xl font-black">
+                        أهلاً يا بطل، <span id="dash-student-name" class="accent-text">الطالب</span>! 🚀
+                    </h2>
+                    <p class="text-xs sm:text-sm flex flex-wrap items-center gap-2" style="color: var(--text-secondary);">
+                        <span>موعد الامتحانات المستهدف:</span>
+                        <strong id="exam-target-date-text" class="accent-text font-extrabold"></strong>
+                        <button onclick="toggleExamDateEditor()" class="underline text-xs font-bold opacity-80 hover:opacity-100 cursor-pointer">
+                            (تعديل التاريخ)
+                        </button>
+                    </p>
+                    <!-- Optional Manual Exam Date Editor -->
+                    <div id="exam-date-editor" class="hidden pt-2 flex flex-wrap items-center gap-2">
+                        <input type="date" id="custom-exam-date-input" class="theme-input px-3 py-1.5 rounded-xl text-xs font-bold">
+                        <button onclick="saveCustomExamDate()" class="theme-btn-primary px-3 py-1.5 rounded-xl text-xs font-extrabold cursor-pointer">
+                            حفظ الموعد
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Live Ticking Countdown Boxes (أيام - ساعات - دقائق - ثواني) -->
+                <div class="w-full lg:w-auto">
+                    <p class="text-xs font-extrabold mb-2 text-center lg:text-right" style="color: var(--text-muted);">
+                        <i class="fa-solid fa-hourglass-half accent-text ml-1 animate-spin" style="animation-duration: 6s;"></i>
+                        الوقت المتبقي على الامتحانات (يتناقص تلقائياً كل ثانية):
+                    </p>
+                    <div class="grid grid-cols-4 gap-2 sm:gap-3 text-center">
+                        <div class="theme-card-secondary rounded-2xl p-3 sm:px-5 sm:py-3.5 border" style="border-color: var(--accent-primary);">
+                            <span id="cd-days" class="block text-2xl sm:text-3xl font-black accent-text">00</span>
+                            <span class="text-[11px] font-bold" style="color: var(--text-muted);">يوم</span>
+                        </div>
+                        <div class="theme-card-secondary rounded-2xl p-3 sm:px-5 sm:py-3.5">
+                            <span id="cd-hours" class="block text-2xl sm:text-3xl font-black">00</span>
+                            <span class="text-[11px] font-bold" style="color: var(--text-muted);">ساعة</span>
+                        </div>
+                        <div class="theme-card-secondary rounded-2xl p-3 sm:px-5 sm:py-3.5">
+                            <span id="cd-minutes" class="block text-2xl sm:text-3xl font-black">00</span>
+                            <span class="text-[11px] font-bold" style="color: var(--text-muted);">دقيقة</span>
+                        </div>
+                        <div class="theme-card-secondary rounded-2xl p-3 sm:px-5 sm:py-3.5">
+                            <span id="cd-seconds" class="block text-2xl sm:text-3xl font-black text-amber-500">00</span>
+                            <span class="text-[11px] font-bold" style="color: var(--text-muted);">ثانية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notification Status & Quick Reminder Strip -->
+        <section class="theme-card rounded-3xl p-4 sm:p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div class="flex items-start sm:items-center gap-3.5">
+                <div class="w-11 h-11 rounded-2xl accent-bg-soft accent-text flex items-center justify-center text-lg shrink-0">
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+                <div>
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <h3 class="font-extrabold text-sm sm:text-base">تذكيرات المذاكرة والأذكار</h3>
+                        <span id="notif-status-badge" class="text-xs font-bold px-2.5 py-0.5 rounded-full" style="background-color: var(--badge-bg); color: var(--badge-text);">
+                            مفعّل
+                        </span>
+                    </div>
+                    <p class="text-xs mt-0.5" style="color: var(--text-secondary);">
+                        اختر السماح بالإشعارات وحدد كل كام دقيقة تحب مِشوار يفكّرك بالمذاكرة أو بالأذكار.
+                    </p>
+                    <p class="text-[10px] mt-1" style="color: var(--text-muted);">ملحوظة: التذكيرات التلقائية تعمل أثناء فتح الموقع؛ إرسالها بعد إغلاق المتصفح يحتاج إعداد إشعارات خلفية إضافي.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-2 w-full md:w-auto justify-end">
+                <select id="reminder-frequency" onchange="saveReminderSettings()" class="theme-input px-3 py-2 rounded-xl text-xs font-bold" aria-label="تكرار التذكير">
+                    <option value="30">كل 30 دقيقة</option>
+                    <option value="60" selected>كل ساعة</option>
+                    <option value="90">كل ساعة ونصف</option>
+                    <option value="120">كل ساعتين</option>
+                </select>
+                <label class="theme-card-secondary px-3 py-2 rounded-xl text-xs font-bold flex items-center gap-2 cursor-pointer">
+                    <input id="dhikr-reminders" type="checkbox" checked onchange="saveReminderSettings()" class="accent-blue-600">
+                    تذكيرات الأذكار
+                </label>
+                <button id="btn-enable-notif" onclick="requestNotificationPermission()" class="theme-card-secondary px-3.5 py-2 rounded-2xl text-xs font-bold flex items-center gap-1.5 cursor-pointer">
+                    <i class="fa-solid fa-bell-concierge accent-text"></i><span>السماح بالإشعارات</span>
+                </button>
+                <button onclick="sendTestReminder()" class="theme-btn-primary px-4 py-2 rounded-2xl text-xs font-extrabold flex items-center gap-1.5 cursor-pointer">
+                    <i class="fa-solid fa-paper-plane"></i><span>جرّب تنبيهًا الآن</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Quick Stats Overview -->
+        <section class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+            <div class="theme-card rounded-3xl p-4 sm:p-5">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="text-xs font-bold" style="color: var(--text-muted);">المواد المخططة</span>
+                    <div class="w-8 h-8 rounded-xl accent-bg-soft accent-text flex items-center justify-center">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                </div>
+                <p id="stat-total-subjects" class="text-2xl sm:text-3xl font-black">0</p>
+            </div>
+
+            <div class="theme-card rounded-3xl p-4 sm:p-5">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="text-xs font-bold" style="color: var(--text-muted);">الدروس/الوحدات المنجزة</span>
+                    <div class="w-8 h-8 rounded-xl bg-emerald-500/15 text-emerald-500 flex items-center justify-center">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </div>
+                <p id="stat-completed-tasks" class="text-2xl sm:text-3xl font-black text-emerald-500">0 / 0</p>
+            </div>
+
+            <div class="theme-card rounded-3xl p-4 sm:p-5">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="text-xs font-bold" style="color: var(--text-muted);">المهام المتبقية</span>
+                    <div class="w-8 h-8 rounded-xl bg-amber-500/15 text-amber-500 flex items-center justify-center">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+                </div>
+                <p id="stat-pending-tasks" class="text-2xl sm:text-3xl font-black text-amber-500">0</p>
+            </div>
+
+            <div class="theme-card rounded-3xl p-4 sm:p-5">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="text-xs font-bold" style="color: var(--text-muted);">نسبة الإنجاز الكلية</span>
+                    <div class="w-8 h-8 rounded-xl accent-bg-soft accent-text flex items-center justify-center">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                </div>
+                <p id="stat-progress-percent" class="text-2xl sm:text-3xl font-black accent-text">0%</p>
+            </div>
+        </section>
+
+        <!-- SMART MULTI-SUBJECT STUDY PLANNER (اختيار المواد + بالدرس أو بالوحدة + بالأسابيع أو الشهور) -->
+        <section class="theme-card rounded-3xl p-5 sm:p-7 space-y-5">
+            <div class="flex flex-wrap items-center justify-between gap-3 border-b pb-4" style="border-color: var(--border-color);">
+                <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-2xl theme-btn-primary flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-lg sm:text-xl font-black">خطط لموادك الدراسية (بالدرس أو بالوحدة)</h2>
+                        <p class="text-xs" style="color: var(--text-muted);">
+                            اختر المواد التي تريد مذاكرتها الآن، وحدد عدد الدروس أو الوحدات والمدة الزمنية (بالأسابيع أو بالشهور).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <button type="button" onclick="selectAllPlannerSubjects(true)" class="theme-card-secondary px-3 py-1.5 rounded-xl text-xs font-bold cursor-pointer">
+                        تحديد الكل
+                    </button>
+                    <button type="button" onclick="selectAllPlannerSubjects(false)" class="theme-card-secondary px-3 py-1.5 rounded-xl text-xs font-bold cursor-pointer">
+                        إلغاء التحديد
+                    </button>
+                </div>
+            </div>
+
+            <!-- Grid of Student's Registered Subjects with Per-Subject Controls -->
+            <div id="student-subjects-planner-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Subject planner cards injected dynamically -->
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-3 border-t" style="border-color: var(--border-color);">
+                <div class="flex items-center gap-2.5 text-xs font-bold" style="color: var(--text-secondary);">
+                    <i class="fa-solid fa-calendar-check accent-text text-base"></i>
+                    <span>سيقسم مِشوار الدروس والواجبات على تواريخ فعلية من تاريخ البداية حتى موعد الانتهاء.</span>
+                </div>
+                <button type="button" onclick="generateSelectedSchedules()" 
+                    class="theme-btn-primary w-full sm:w-auto px-7 py-3.5 rounded-2xl font-black text-sm sm:text-base flex items-center justify-center gap-2 cursor-pointer shadow-lg">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>توليد الجدول الذكي للمواد المحددة</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- GENERATED STUDY SCHEDULES & TASKS LIST -->
+        <section class="space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-black">جدولك الدراسي التفصيلي والمهام</h2>
+                    <p class="text-xs sm:text-sm" style="color: var(--text-muted);">كل درس وواجب له تاريخ تنفيذ محدد؛ اضغط على المهمة بعد إنجازها لتحديث تقدمك</p>
+                </div>
+                <button onclick="clearAllData()" id="btn-clear-all" class="hidden text-xs font-bold text-rose-500 hover:bg-rose-500/10 px-3.5 py-2 rounded-xl transition cursor-pointer">
+                    <i class="fa-solid fa-trash-can ml-1"></i> مسح كل الجداول
+                </button>
+            </div>
+
+            <div id="subjects-container" class="space-y-5">
+                <!-- Dynamic Generated Schedules injected here -->
+            </div>
+        </section>
+
+        <!-- =================================================================
+             5. ABOUT PLATFORM & DEVELOPER CREDITS SECTION (عن الموقع والمبرمج)
+             ================================================================= -->
+        <section id="about-section" class="theme-card rounded-3xl p-6 sm:p-8 mt-8 relative overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Platform Benefits -->
+                <div class="lg:col-span-7 space-y-4">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold" style="background-color: var(--badge-bg); color: var(--badge-text);">
+                        <i class="fa-solid fa-sparkles"></i>
+                        <span>لماذا تستخدم منظم المذاكرة الذكي؟</span>
+                    </div>
+                    <h2 class="text-2xl sm:text-3xl font-black leading-snug">
+                        فائدة المنصة وكيف تساعدك على التفوق الدراسي
+                    </h2>
+                    <p class="text-sm sm:text-base leading-relaxed" style="color: var(--text-secondary);">
+                        تم تصميم هذه المنصة لمساعدة الطلاب على تنظيم موادهم ومتابعة الدروس والواجبات بتواريخ واضحة، مع خطة مرنة حسب المدة التي يختارها الطالب وعداد تنازلي للامتحانات وتذكيرات اختيارية.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
+                        <div class="theme-card-secondary p-4 rounded-2xl flex items-start gap-3">
+                            <i class="fa-solid fa-graduation-cap accent-text text-lg mt-0.5"></i>
+                            <div>
+                                <h3 class="font-extrabold text-sm">دعم كامل للمراحل والمسارات</h3>
+                                <p class="text-xs mt-1" style="color: var(--text-muted);">مواد مخصصة للإعدادي، مسارات البكالوريا الأربعة، وشعب الثانوية.</p>
+                            </div>
+                        </div>
+                        <div class="theme-card-secondary p-4 rounded-2xl flex items-start gap-3">
+                            <i class="fa-solid fa-hourglass-half accent-text text-lg mt-0.5"></i>
+                            <div>
+                                <h3 class="font-extrabold text-sm">عداد تنازلي حي للامتحان</h3>
+                                <p class="text-xs mt-1" style="color: var(--text-muted);">يحسب الأيام والساعات والثواني المتبقية على امتحاناتك لحظة بلحظة.</p>
+                            </div>
+                        </div>
+                        <div class="theme-card-secondary p-4 rounded-2xl flex items-start gap-3">
+                            <i class="fa-solid fa-robot accent-text text-lg mt-0.5"></i>
+                            <div>
+                                <h3 class="font-extrabold text-sm">خطة يومية بالتواريخ</h3>
+                                <p class="text-xs mt-1" style="color: var(--text-muted);">يوزع الدروس والواجبات على أيام محددة حسب المدة التي تختارها.</p>
+                            </div>
+                        </div>
+                        <div class="theme-card-secondary p-4 rounded-2xl flex items-start gap-3">
+                            <i class="fa-solid fa-bell accent-text text-lg mt-0.5"></i>
+                            <div>
+                                <h3 class="font-extrabold text-sm">تذكيرات للمذاكرة والذكر</h3>
+                                <p class="text-xs mt-1" style="color: var(--text-muted);">تذكيرات اختيارية للمذاكرة والأذكار والصلاة على النبي ﷺ.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Developer Card: المبرمج أدهم سمير -->
+                <div class="lg:col-span-5">
+                    <div class="theme-card-secondary rounded-3xl p-6 sm:p-7 text-center border-2" style="border-color: var(--accent-primary);">
+                        <div class="w-20 h-20 mx-auto rounded-3xl theme-btn-primary flex items-center justify-center text-3xl font-black shadow-lg mb-4">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <span class="text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-full" style="background-color: var(--badge-bg); color: var(--badge-text);">
+                            مؤسس ومطور المنصة
+                        </span>
+                        <h3 class="text-2xl font-black mt-3">المبرمج أدهم سمير</h3>
+                        <p class="text-xs font-bold accent-text mt-1">Adham Samir — Full-Stack Web Developer</p>
+                        <p class="text-sm mt-3 leading-relaxed" style="color: var(--text-secondary);">
+                            "هدفي هو بناء منصات تعليمية ذكية وعصرية تساعد كل طالب وطالبة على تنظيم وقتهم وتحقيق أعلى الدرجات بأفضل تجربة استخدام."
+                        </p>
+                        <div class="mt-5 pt-4 border-t flex items-center justify-center gap-3 text-xs font-bold" style="border-color: var(--border-color); color: var(--text-muted);">
+                            <span><i class="fa-solid fa-heart text-rose-500 ml-1"></i> صُمم وبرمج بكل إتقان للطلاب</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =================================================================
+         6. FOOTER
+         ================================================================= -->
+    <footer class="theme-card border-t mt-12 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-right">
+            <p class="text-sm font-bold">
+                جميع الحقوق محفوظة &copy; <span id="current-year">2026</span> | تصميم وبرمجة: 
+                <span class="accent-text font-black">المبرمج أدهم سمير</span>
+            </p>
+            <button onclick="replayIntroOnce()" class="text-xs underline opacity-60 hover:opacity-100 cursor-pointer" style="color: var(--text-muted);">
+                معاينة دخلة الكتاب مرة أخرى
+            </button>
+        </div>
+    </footer>
+
+    <!-- =================================================================
+         7. IN-APP TOAST & CUSTOM CONFIRMATION MODAL (No alert/confirm!)
+         ================================================================= -->
+    <div id="toast-container" class="fixed bottom-5 left-5 z-50 flex flex-col gap-2.5 max-w-sm w-full pointer-events-none px-4 sm:px-0"></div>
+
+    <!-- Custom Modal for Confirmations -->
+    <div id="custom-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="theme-card rounded-3xl max-w-md w-full p-6 shadow-2xl space-y-4">
+            <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-2xl bg-rose-500/15 text-rose-500 flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <h3 id="modal-title" class="text-lg font-extrabold">تأكيد الإجراء</h3>
+            </div>
+            <p id="modal-message" class="text-sm" style="color: var(--text-secondary);">هل أنت متأكد من رغبتك في المتابعة؟</p>
+            <div class="flex items-center justify-end gap-2.5 pt-2">
+                <button onclick="closeCustomModal()" class="theme-card-secondary px-4 py-2.5 rounded-2xl text-sm font-bold cursor-pointer">
+                    إلغاء
+                </button>
+                <button id="modal-confirm-btn" class="bg-rose-600 hover:bg-rose-700 text-white px-5 py-2.5 rounded-2xl text-sm font-bold cursor-pointer">
+                    نعم، تأكيد
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =================================================================
+         8. APPLICATION LOGIC (JAVASCRIPT)
+         ================================================================= -->
+    <script>
+        // Storage Keys
+        const STORAGE_KEYS = {
+            INTRO_SEEN: 'adham_study_intro_seen_v2',
+            THEME: 'adham_study_theme_v2',
+            PROFILE: 'adham_study_profile_v2',
+            SUBJECTS: 'adham_study_schedules_v2',
+            REMINDER_FREQ: 'adham_study_reminder_freq_v2'
+        };
+
+        // Academic Stages & Egyptian Baccalaureate Tracks Database
+        const ACADEMIC_DATA = {
+            grades: [
+                { id: 'prep1', label: 'أولى إعدادي', type: 'prep', defaultExam: '2027-01-12T09:00:00' },
+                { id: 'prep2', label: 'تانية إعدادي', type: 'prep', defaultExam: '2027-01-12T09:00:00' },
+                { id: 'prep3', label: 'تالتة إعدادي', type: 'prep', defaultExam: '2027-01-18T09:00:00' },
+                { id: 'bac1',  label: 'أولى بكالوريا', type: 'bac', defaultExam: '2027-01-16T09:00:00' },
+                { id: 'bac2',  label: 'تانية بكالوريا', type: 'bac', defaultExam: '2027-05-22T09:00:00' },
+                { id: 'sec3',  label: 'تالتة ثانوي', type: 'sec3', defaultExam: '2027-06-12T09:00:00' }
+            ],
+            prepSubjects: [
+                'اللغة العربية', 'اللغة الإنجليزية', 'الرياضيات', 'العلوم', 'الدراسات الاجتماعية', 'الحاسب الآلي'
+            ],
+            bacTracks: [
+                {
+                    id: 'medicine',
+                    name: 'مسار الطب وعلوم الحياة',
+                    icon: 'fa-stethoscope',
+                    subjects: ['اللغة العربية', 'اللغة الإنجليزية', 'اللغة الأجنبية الثانية', 'الأحياء', 'الكيمياء', 'الفيزياء', 'الرياضيات']
+                },
+                {
+                    id: 'engineering',
+                    name: 'مسار الهندسة وعلوم الحاسب',
+                    icon: 'fa-microchip',
+                    subjects: ['اللغة العربية', 'اللغة الإنجليزية', 'اللغة الأجنبية الثانية', 'الرياضيات', 'الفيزياء', 'الكيمياء', 'البرمجة وعلوم الحاسب']
+                },
+                {
+                    id: 'business',
+                    name: 'مسار إدارة الأعمال',
+                    icon: 'fa-briefcase',
+                    subjects: ['اللغة العربية', 'اللغة الإنجليزية', 'اللغة الأجنبية الثانية', 'الاقتصاد', 'المحاسبة وإدارة الأعمال', 'الرياضيات', 'الإحصاء']
+                },
+                {
+                    id: 'arts',
+                    name: 'مسار الآداب والفنون',
+                    icon: 'fa-palette',
+                    subjects: ['اللغة العربية', 'اللغة الإنجليزية', 'اللغة الأجنبية الثانية', 'التاريخ', 'الجغرافيا', 'الفلسفة والمنطق', 'علم النفس والاجتماع']
+                }
+            ],
+            sec3Branches: [
+                {
+                    id: 'sci_bio',
+                    name: 'علمي علوم',
+                    subjects: ['اللغة العربية', 'اللغة الإنجليزية', 'الأحياء', 'الكيمياء', 'الفيزياء']
+                },
+                {
+                    id: 'sci_math',
+                    name: 'علمي رياضة',
+                    subjects: ['اللغة العربية', 'اللغة الإنجليزية', 'الرياضيات البحتة والتطبيقية', 'الفيزياء', 'الكيمياء']
+                },
+                {
+                    id: 'literary',
+                    name: 'أدبي',
+                    subjects: ['اللغة العربية', 'اللغة الإنجليزية', 'التاريخ', 'الجغرافيا', 'الإحصاء']
+                }
+            ]
+        };
+
+        // App State
+        let studentProfile = null;
+        let subjects = [];
+        let reminderTimer = null;
+        let countdownInterval = null;
+
+        // Onboarding Temp State
+        let selectedGradeId = '';
+        let selectedTrackId = '';
+        let selectedLoginSubjects = [];
+
+        // =========================================
+        // 1. Extended One-Time Opening Book Intro Logic (4.8s)
+        // =========================================
+        function initIntroAnimation() {
+            const introOverlay = document.getElementById('intro-overlay');
+            const hasSeenIntro = localStorage.getItem(STORAGE_KEYS.INTRO_SEEN);
+
+            if (hasSeenIntro === 'true') {
+                introOverlay.style.display = 'none';
+            } else {
+                localStorage.setItem(STORAGE_KEYS.INTRO_SEEN, 'true');
+                setTimeout(() => {
+                    introOverlay.classList.add('fade-out');
+                    setTimeout(() => {
+                        introOverlay.style.display = 'none';
+                    }, 750);
+                }, 4750);
+            }
+        }
+
+        function replayIntroOnce() {
+            const introOverlay = document.getElementById('intro-overlay');
+            introOverlay.style.display = 'flex';
+            introOverlay.classList.remove('fade-out');
+            setTimeout(() => {
+                introOverlay.classList.add('fade-out');
+                setTimeout(() => {
+                    introOverlay.style.display = 'none';
+                }, 750);
+            }, 4750);
+        }
+
+        // =========================================
+        // 2. Dual Color Theme Switcher (أبيض وأزرق / أسود وذهبي)
+        // =========================================
+        function setTheme(themeName) {
+            document.documentElement.setAttribute('data-theme', themeName);
+            localStorage.setItem(STORAGE_KEYS.THEME, themeName);
+
+            const btnBlue = document.getElementById('btn-theme-blue');
+            const btnGold = document.getElementById('btn-theme-gold');
+
+            if (themeName === 'blue-white') {
+                btnBlue.style.backgroundColor = 'var(--accent-primary)';
+                btnBlue.style.color = '#ffffff';
+                btnGold.style.backgroundColor = 'transparent';
+                btnGold.style.color = 'var(--text-secondary)';
+            } else {
+                btnGold.style.backgroundColor = 'var(--accent-primary)';
+                btnGold.style.color = '#09090b';
+                btnBlue.style.backgroundColor = 'transparent';
+                btnBlue.style.color = 'var(--text-secondary)';
+            }
+        }
+
+        function loadSavedTheme() {
+            const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME) || 'blue-white';
+            setTheme(savedTheme);
+        }
+
+        // =========================================
+        // 3. Onboarding / Student Login System
+        // =========================================
+        function renderOnboardingGrades() {
+            const grid = document.getElementById('grade-selection-grid');
+            grid.innerHTML = ACADEMIC_DATA.grades.map(g => `
+                <button type="button" onclick="selectOnboardingGrade('${g.id}')" id="grade-btn-${g.id}"
+                    class="grade-choice-btn theme-input p-3.5 rounded-2xl text-sm font-extrabold text-center transition-all cursor-pointer hover:opacity-90">
+                    ${g.label}
+                </button>
+            `).join('');
+
+            const bacGrid = document.getElementById('bac-tracks-grid');
+            bacGrid.innerHTML = ACADEMIC_DATA.bacTracks.map(t => `
+                <button type="button" onclick="selectOnboardingTrack('${t.id}')" id="track-btn-${t.id}"
+                    class="track-choice-btn theme-input p-3.5 rounded-2xl text-xs sm:text-sm font-extrabold flex items-center gap-2.5 text-right transition-all cursor-pointer">
+                    <i class="fa-solid ${t.icon} accent-text text-base"></i>
+                    <span>${t.name}</span>
+                </button>
+            `).join('');
+
+            const sec3Grid = document.getElementById('sec3-branches-grid');
+            sec3Grid.innerHTML = ACADEMIC_DATA.sec3Branches.map(b => `
+                <button type="button" onclick="selectOnboardingBranch('${b.id}')" id="branch-btn-${b.id}"
+                    class="branch-choice-btn theme-input p-3.5 rounded-2xl text-xs sm:text-sm font-extrabold text-center transition-all cursor-pointer">
+                    ${b.name}
+                </button>
+            `).join('');
+        }
+
+        function selectOnboardingGrade(gradeId) {
+            selectedGradeId = gradeId;
+            selectedTrackId = '';
+
+            // Highlight selected grade button
+            document.querySelectorAll('.grade-choice-btn').forEach(btn => {
+                btn.style.borderColor = 'var(--border-color)';
+                btn.style.backgroundColor = 'var(--bg-main)';
+            });
+            const activeBtn = document.getElementById(`grade-btn-${gradeId}`);
+            if (activeBtn) {
+                activeBtn.style.borderColor = 'var(--accent-primary)';
+                activeBtn.style.borderWidth = '2px';
+                activeBtn.style.backgroundColor = 'var(--accent-soft)';
+            }
+
+            const gradeObj = ACADEMIC_DATA.grades.find(g => g.id === gradeId);
+            const bacContainer = document.getElementById('bac-track-container');
+            const sec3Container = document.getElementById('sec3-branch-container');
+            const subjectsPreview = document.getElementById('login-subjects-preview');
+
+            bacContainer.classList.add('hidden');
+            sec3Container.classList.add('hidden');
+
+            if (gradeObj.type === 'prep') {
+                selectedLoginSubjects = [...ACADEMIC_DATA.prepSubjects];
+                subjectsPreview.classList.remove('hidden');
+                renderLoginSubjectChips();
+            } else if (gradeObj.type === 'bac') {
+                bacContainer.classList.remove('hidden');
+                subjectsPreview.classList.add('hidden');
+            } else if (gradeObj.type === 'sec3') {
+                sec3Container.classList.remove('hidden');
+                subjectsPreview.classList.add('hidden');
+            }
+        }
+
+        function selectOnboardingTrack(trackId) {
+            selectedTrackId = trackId;
+            document.querySelectorAll('.track-choice-btn').forEach(btn => {
+                btn.style.borderColor = 'var(--border-color)';
+                btn.style.backgroundColor = 'var(--bg-main)';
+            });
+            const activeBtn = document.getElementById(`track-btn-${trackId}`);
+            if (activeBtn) {
+                activeBtn.style.borderColor = 'var(--accent-primary)';
+                activeBtn.style.borderWidth = '2px';
+                activeBtn.style.backgroundColor = 'var(--accent-soft)';
+            }
+
+            const trackObj = ACADEMIC_DATA.bacTracks.find(t => t.id === trackId);
+            if (trackObj) {
+                selectedLoginSubjects = [...trackObj.subjects];
+                document.getElementById('login-subjects-preview').classList.remove('hidden');
+                renderLoginSubjectChips();
+            }
+        }
+
+        function selectOnboardingBranch(branchId) {
+            selectedTrackId = branchId;
+            document.querySelectorAll('.branch-choice-btn').forEach(btn => {
+                btn.style.borderColor = 'var(--border-color)';
+                btn.style.backgroundColor = 'var(--bg-main)';
+            });
+            const activeBtn = document.getElementById(`branch-btn-${branchId}`);
+            if (activeBtn) {
+                activeBtn.style.borderColor = 'var(--accent-primary)';
+                activeBtn.style.borderWidth = '2px';
+                activeBtn.style.backgroundColor = 'var(--accent-soft)';
+            }
+
+            const branchObj = ACADEMIC_DATA.sec3Branches.find(b => b.id === branchId);
+            if (branchObj) {
+                selectedLoginSubjects = [...branchObj.subjects];
+                document.getElementById('login-subjects-preview').classList.remove('hidden');
+                renderLoginSubjectChips();
+            }
+        }
+
+        function renderLoginSubjectChips() {
+            const container = document.getElementById('login-subjects-chips');
+            container.innerHTML = selectedLoginSubjects.map((sub, idx) => `
+                <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-2xl text-xs font-extrabold theme-card-secondary border" style="border-color: var(--accent-primary);">
+                    <i class="fa-solid fa-check accent-text"></i>
+                    <span>${escapeHtml(sub)}</span>
+                    <button type="button" onclick="removeLoginSubject(${idx})" class="text-rose-500 hover:opacity-75 cursor-pointer mr-1" title="حذف المادة">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </span>
+            `).join('');
+        }
+
+        function removeLoginSubject(index) {
+            selectedLoginSubjects.splice(index, 1);
+            renderLoginSubjectChips();
+        }
+
+        function addCustomLoginSubject() {
+            const input = document.getElementById('custom-subject-input');
+            const val = input.value.trim();
+            if (!val) return;
+            if (!selectedLoginSubjects.includes(val)) {
+                selectedLoginSubjects.push(val);
+                renderLoginSubjectChips();
+            }
+            input.value = '';
+        }
+
+
+        function handleStudentLogin(event) {
+            event.preventDefault();
+            const nameVal = document.getElementById('login-student-name').value.trim();
+
+            if (!nameVal) {
+                showToast('من فضلك أدخل اسمك أولاً.', 'warning');
+                return;
+            }
+            if (!selectedGradeId) {
+                showToast('من فضلك اختر مرحلتك الدراسية.', 'warning');
+                return;
+            }
+            const gradeObj = ACADEMIC_DATA.grades.find(g => g.id === selectedGradeId);
+            if ((gradeObj.type === 'bac' || gradeObj.type === 'sec3') && !selectedTrackId) {
+                showToast('من فضلك اختر المسار أو الشعبة الخاصة بك.', 'warning');
+                return;
+            }
+            if (selectedLoginSubjects.length === 0) {
+                showToast('يجب أن يكون لديك مادة دراسية واحدة على الأقل.', 'warning');
+                return;
+            }
+
+            let trackName = '';
+            if (gradeObj.type === 'bac') {
+                trackName = ACADEMIC_DATA.bacTracks.find(t => t.id === selectedTrackId)?.name || '';
+            } else if (gradeObj.type === 'sec3') {
+                trackName = ACADEMIC_DATA.sec3Branches.find(b => b.id === selectedTrackId)?.name || '';
+            }
+
+            studentProfile = {
+                name: nameVal,
+                gradeId: gradeObj.id,
+                gradeLabel: gradeObj.label,
+                trackId: selectedTrackId,
+                trackName: trackName,
+                registeredSubjects: [...selectedLoginSubjects],
+                examDate: studentProfile?.examDate || gradeObj.defaultExam,
+                notificationsEnabled: ('Notification' in window && Notification.permission === 'granted')
+            };
+
+            localStorage.setItem(STORAGE_KEYS.PROFILE, JSON.stringify(studentProfile));
+            showDashboardView();
+            showToast(`أهلاً بك يا ${studentProfile.name}! تم تجهيز لوحتك الدراسية بنجاح.`, 'success');
+        }
+
+        function openProfileEdit() {
+            if (!studentProfile) return;
+            document.getElementById('login-student-name').value = studentProfile.name;
+            selectOnboardingGrade(studentProfile.gradeId);
+            if (studentProfile.trackId) {
+                const gradeObj = ACADEMIC_DATA.grades.find(g => g.id === studentProfile.gradeId);
+                if (gradeObj?.type === 'bac') selectOnboardingTrack(studentProfile.trackId);
+                if (gradeObj?.type === 'sec3') selectOnboardingBranch(studentProfile.trackId);
+            }
+            selectedLoginSubjects = [...studentProfile.registeredSubjects];
+            renderLoginSubjectChips();
+
+            document.getElementById('dashboard-view').classList.add('hidden');
+            document.getElementById('login-view').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showDashboardView() {
+            document.getElementById('login-view').classList.add('hidden');
+            document.getElementById('dashboard-view').classList.remove('hidden');
+
+            // Update Header Info
+            document.getElementById('header-student-info').classList.remove('hidden');
+            document.getElementById('header-student-name').textContent = studentProfile.name;
+            document.getElementById('header-student-grade').textContent = studentProfile.gradeLabel;
+            document.getElementById('header-logout-btn').classList.remove('hidden');
+            document.getElementById('header-logout-btn').classList.add('flex');
+
+            // Update Dashboard Welcome & Badges
+            document.getElementById('dash-student-name').textContent = studentProfile.name;
+            document.getElementById('dash-grade-badge').textContent = studentProfile.gradeLabel;
+
+            const trackBadge = document.getElementById('dash-track-badge');
+            if (studentProfile.trackName) {
+                trackBadge.textContent = studentProfile.trackName;
+                trackBadge.classList.remove('hidden');
+            } else {
+                trackBadge.classList.add('hidden');
+            }
+
+            startExamCountdown();
+            renderPlannerSubjectsGrid();
+            renderSubjects();
+            loadReminderSettings();
+            startPeriodicReminders();
+        }
+
+        // =========================================
+        // 4. Live Ticking Exam Countdown Engine
+        // =========================================
+        function startExamCountdown() {
+            if (countdownInterval) clearInterval(countdownInterval);
+            if (!studentProfile?.examDate) return;
+
+            const targetDate = new Date(studentProfile.examDate);
+            const formattedDate = targetDate.toLocaleDateString('ar-EG', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            document.getElementById('exam-target-date-text').textContent = formattedDate;
+            document.getElementById('custom-exam-date-input').value = studentProfile.examDate.split('T')[0];
+
+            function updateTick() {
+                const now = new Date().getTime();
+                const distance = targetDate.getTime() - now;
+
+                if (distance <= 0) {
+                    document.getElementById('cd-days').textContent = '00';
+                    document.getElementById('cd-hours').textContent = '00';
+                    document.getElementById('cd-minutes').textContent = '00';
+                    document.getElementById('cd-seconds').textContent = '00';
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+                document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('cd-minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('cd-seconds').textContent = String(seconds).padStart(2, '0');
+            }
+
+            updateTick();
+            countdownInterval = setInterval(updateTick, 1000);
+        }
+
+        function toggleExamDateEditor() {
+            document.getElementById('exam-date-editor').classList.toggle('hidden');
+        }
+
+        function saveCustomExamDate() {
+            const val = document.getElementById('custom-exam-date-input').value;
+            if (!val) return;
+            studentProfile.examDate = `${val}T09:00:00`;
+            localStorage.setItem(STORAGE_KEYS.PROFILE, JSON.stringify(studentProfile));
+            startExamCountdown();
+            toggleExamDateEditor();
+            showToast('تم تحديث موعد الامتحانات والعداد التنازلي بنجاح!', 'success');
+        }
+
+        // =========================================
+        // 5. Multi-Subject Study Planner (Lesson/Unit + Weeks/Months)
+        // =========================================
+        function renderPlannerSubjectsGrid() {
+            const grid = document.getElementById('student-subjects-planner-grid');
+            if (!studentProfile?.registeredSubjects) return;
+
+            grid.innerHTML = studentProfile.registeredSubjects.map((subName, idx) => `
+                <div class="theme-card-secondary rounded-3xl p-4 sm:p-5 border transition-all space-y-3.5" id="planner-card-${idx}">
+                    <!-- Top Checkbox + Subject Title -->
+                    <label class="flex items-center justify-between cursor-pointer select-none">
+                        <div class="flex items-center gap-2.5">
+                            <input type="checkbox" id="plan-check-${idx}" checked 
+                                onchange="togglePlannerCardOpacity(${idx})"
+                                class="w-5 h-5 accent-blue-600 rounded-lg cursor-pointer">
+                            <span class="font-black text-base sm:text-lg">${escapeHtml(subName)}</span>
+                        </div>
+                        <span class="text-[11px] font-extrabold px-2.5 py-0.5 rounded-full accent-bg-soft accent-text">
+                            مادة #${idx + 1}
+                        </span>
+                    </label>
+
+                    <!-- Division Type (بالدرس أو بالوحدة) & Count -->
+                    <div class="grid grid-cols-2 gap-2.5">
+                        <div>
+                            <label class="block text-[11px] font-bold mb-1" style="color: var(--text-muted);">نظام المذاكرة</label>
+                            <select id="plan-unit-type-${idx}" onchange="updatePlannerRatePreview(${idx})"
+                                class="theme-input w-full px-3 py-2 rounded-xl text-xs font-extrabold">
+                                <option value="درس">بالدرس (دروس)</option>
+                                <option value="وحدة">بالوحدة (وحدات)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold mb-1" style="color: var(--text-muted);">العدد المطلوب</label>
+                            <input type="number" id="plan-count-${idx}" min="1" max="200" value="8" 
+                                oninput="updatePlannerRatePreview(${idx})"
+                                class="theme-input w-full px-3 py-2 rounded-xl text-xs font-extrabold">
+                        </div>
+                    </div>
+
+                    <!-- Start date for this subject plan -->
+                    <div>
+                        <label class="block text-[11px] font-bold mb-1" style="color: var(--text-muted);">تاريخ بداية الخطة</label>
+                        <input type="date" id="plan-start-date-${idx}" value="${getLocalDateString()}" onchange="updatePlannerRatePreview(${idx})" class="theme-input w-full px-3 py-2 rounded-xl text-xs font-extrabold">
+                    </div>
+
+                    <!-- Duration Unit (بالأسابيع أو بالشهور) & Duration Value -->
+                    <div class="grid grid-cols-2 gap-2.5">
+                        <div>
+                            <label class="block text-[11px] font-bold mb-1" style="color: var(--text-muted);">المدة الزمنية</label>
+                            <input type="number" id="plan-duration-val-${idx}" min="1" max="24" value="4" 
+                                oninput="updatePlannerRatePreview(${idx})"
+                                class="theme-input w-full px-3 py-2 rounded-xl text-xs font-extrabold">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold mb-1" style="color: var(--text-muted);">وحدة المدة</label>
+                            <select id="plan-duration-unit-${idx}" onchange="updatePlannerRatePreview(${idx})"
+                                class="theme-input w-full px-3 py-2 rounded-xl text-xs font-extrabold">
+                                <option value="weeks">أسابيع</option>
+                                <option value="months">شهور</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Live Rate Preview -->
+                    <div id="plan-rate-preview-${idx}" class="text-[11px] font-bold px-3 py-2 rounded-xl accent-bg-soft accent-text flex items-center gap-1.5">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>المعدل: 2 درس أسبوعياً</span>
+                    </div>
+                </div>
+            `).join('');
+
+            studentProfile.registeredSubjects.forEach((_, idx) => updatePlannerRatePreview(idx));
+        }
+
+        function togglePlannerCardOpacity(idx) {
+            const checked = document.getElementById(`plan-check-${idx}`).checked;
+            const card = document.getElementById(`planner-card-${idx}`);
+            card.style.opacity = checked ? '1' : '0.45';
+        }
+
+        function selectAllPlannerSubjects(state) {
+            studentProfile.registeredSubjects.forEach((_, idx) => {
+                const cb = document.getElementById(`plan-check-${idx}`);
+                if (cb) {
+                    cb.checked = state;
+                    togglePlannerCardOpacity(idx);
+                }
+            });
+        }
+
+        function getLocalDateString(date = new Date()) {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        }
+
+        function getPlanDurationDays(startDate, durationValue, durationUnit) {
+            const start = new Date(`${startDate}T12:00:00`);
+            const end = new Date(start);
+            if (durationUnit === 'months') end.setMonth(end.getMonth() + durationValue);
+            else end.setDate(end.getDate() + durationValue * 7);
+            return Math.max(1, Math.round((end - start) / 86400000));
+        }
+
+        function formatArabicDate(dateValue) {
+            const date = new Date(`${dateValue}T12:00:00`);
+            return date.toLocaleDateString('ar-EG', { weekday: 'long', day: '2-digit', month: '2-digit', year: 'numeric' });
+        }
+
+        function updatePlannerRatePreview(idx) {
+            const unitType = document.getElementById(`plan-unit-type-${idx}`).value;
+            const count = Math.max(1, parseInt(document.getElementById(`plan-count-${idx}`).value, 10) || 1);
+            const durVal = Math.max(1, parseInt(document.getElementById(`plan-duration-val-${idx}`).value, 10) || 1);
+            const durUnit = document.getElementById(`plan-duration-unit-${idx}`).value;
+            const startDate = document.getElementById(`plan-start-date-${idx}`)?.value || getLocalDateString();
+            const totalDays = getPlanDurationDays(startDate, durVal, durUnit);
+            const average = (count / totalDays).toFixed(2).replace(/0+$/, '').replace(/\.$/, '');
+            const previewEl = document.getElementById(`plan-rate-preview-${idx}`);
+            if (previewEl) {
+                const endDate = new Date(`${startDate}T12:00:00`);
+                if (durUnit === 'months') endDate.setMonth(endDate.getMonth() + durVal);
+                else endDate.setDate(endDate.getDate() + durVal * 7);
+                previewEl.innerHTML = `<i class="fa-solid fa-calendar-check"></i><span>خطة ${count} ${unitType} خلال ${totalDays} يومًا — من ${formatArabicDate(startDate)} إلى ${formatArabicDate(endDate.toISOString().slice(0,10))} (متوسط ${average} ${unitType} يوميًا)</span>`;
+            }
+        }
+
+        function generateSelectedSchedules() {
+            let addedCount = 0;
+            studentProfile.registeredSubjects.forEach((subName, idx) => {
+                if (!document.getElementById(`plan-check-${idx}`)?.checked) return;
+                const unitType = document.getElementById(`plan-unit-type-${idx}`).value;
+                const itemCount = Math.max(1, Math.min(200, parseInt(document.getElementById(`plan-count-${idx}`).value, 10) || 1));
+                const durVal = Math.max(1, Math.min(24, parseInt(document.getElementById(`plan-duration-val-${idx}`).value, 10) || 1));
+                const durUnit = document.getElementById(`plan-duration-unit-${idx}`).value;
+                const startDate = document.getElementById(`plan-start-date-${idx}`)?.value || getLocalDateString();
+                const totalDays = getPlanDurationDays(startDate, durVal, durUnit);
+                const totalWeeks = Math.ceil(totalDays / 7);
+                const durationLabel = durUnit === 'months' ? `${durVal} ${durVal === 1 ? 'شهر' : 'شهور'}` : `${durVal} ${durVal === 1 ? 'أسبوع' : 'أسابيع'}`;
+                const tasks = [];
+                for (let i = 1; i <= itemCount; i++) {
+                    const offsetDays = itemCount === 1 ? 0 : Math.round(((i - 1) * Math.max(0, totalDays - 1)) / (itemCount - 1));
+                    const due = new Date(`${startDate}T12:00:00`);
+                    due.setDate(due.getDate() + offsetDays);
+                    const dueDate = due.toISOString().slice(0,10);
+                    const weekNumber = Math.floor(offsetDays / 7) + 1;
+                    const monthNumber = Math.floor(offsetDays / 30) + 1;
+                    const dateLabel = formatArabicDate(dueDate);
+                    const itemName = unitType === 'درس' ? 'الدرس' : 'الوحدة';
+                    tasks.push({ id: `task_${Date.now()}_${idx}_${i}_study`, title: `مذاكرة ${itemName} رقم (${i})`, type: unitType, dueDate, weekLabel: `موعد التنفيذ: ${dateLabel} • الأسبوع ${weekNumber} • الشهر ${monthNumber}`, completed: false });
+                    tasks.push({ id: `task_${Date.now()}_${idx}_${i}_hw`, title: `حل تدريبات وواجب ${itemName} (${i})`, type: 'واجب', dueDate, weekLabel: `موعد التنفيذ: ${dateLabel} • الأسبوع ${weekNumber} • الشهر ${monthNumber}`, completed: false });
+                }
+                subjects = subjects.filter(s => s.name !== subName);
+                subjects.unshift({ id: `sub_${Date.now()}_${idx}`, name: subName, durationLabel, unitType, itemCount, totalWeeks, startDate, endDate: (() => { const d = new Date(`${startDate}T12:00:00`); if (durUnit === 'months') d.setMonth(d.getMonth()+durVal); else d.setDate(d.getDate()+durVal*7); return d.toISOString().slice(0,10); })(), createdAt: new Date().toLocaleDateString('ar-EG'), tasks });
+                addedCount++;
+            });
+            if (!addedCount) { showToast('من فضلك حدد مادة واحدة على الأقل لتوليد الجدول!', 'warning'); return; }
+            saveSubjects();
+            renderSubjects();
+            showToast(`تم توزيع ${addedCount} مادة على أيام وتواريخ محددة بنجاح! 🎉`, 'success');
+            document.getElementById('subjects-container').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // =========================================
+        // 6. Notifications & Reminder System
+        // =========================================
+        const REMINDER_MESSAGES = [
+            { title: 'وقت المذاكرة يا بطل 📚', body: 'ابدأ بخطوة صغيرة؛ درس واحد النهارده يقرّبك من هدفك.' },
+            { title: 'مِشوار النجاح مستنيك 🏆', body: 'راجع مهمة من جدولك، وكل إنجاز صغير بيفرق.' },
+            { title: 'استراحة قصيرة ثم نكمل ☕', body: 'نظّم وقتك وارجع لمهمتك التالية بهدوء.' },
+            { title: 'صلّوا على النبي ﷺ', body: 'اللهم صلِّ وسلم وبارك على سيدنا محمد.' },
+            { title: 'ذكر يطمئن القلب 🌿', body: 'سُبْحَانَ اللهِ وَبِحَمْدِهِ، سُبْحَانَ اللهِ الْعَظِيمِ.' },
+            { title: 'لا تنسَ ذكر الله', body: 'لا إله إلا الله.' },
+            { title: 'تذكير لطيف 🌟', body: 'استعن بالله وخد خطوة جديدة في مشوارك.' }
+        ];
+        let reminderMessageIndex = 0;
+
+        function getReminderSettings() {
+            try { return JSON.parse(localStorage.getItem(STORAGE_KEYS.REMINDER_FREQ) || '{}'); }
+            catch (_) { return {}; }
+        }
+
+        function loadReminderSettings() {
+            const settings = getReminderSettings();
+            const frequency = document.getElementById('reminder-frequency');
+            const dhikr = document.getElementById('dhikr-reminders');
+            if (frequency) frequency.value = String(settings.frequency || 60);
+            if (dhikr) dhikr.checked = settings.dhikr !== false;
+            updateNotificationBadge();
+        }
+
+        function saveReminderSettings() {
+            const settings = {
+                frequency: Number(document.getElementById('reminder-frequency')?.value || 60),
+                dhikr: document.getElementById('dhikr-reminders')?.checked !== false
+            };
+            localStorage.setItem(STORAGE_KEYS.REMINDER_FREQ, JSON.stringify(settings));
+            startPeriodicReminders();
+            showToast('تم حفظ إعدادات التذكيرات.', 'success');
+        }
+
+        function updateNotificationBadge() {
+            const badge = document.getElementById('notif-status-badge');
+            if (!badge) return;
+            if ('Notification' in window && Notification.permission === 'granted') {
+                badge.textContent = 'إشعارات المتصفح مسموحة ✓';
+                badge.style.backgroundColor = 'rgba(16, 185, 129, 0.15)';
+                badge.style.color = '#10b981';
+            } else if ('Notification' in window && Notification.permission === 'denied') {
+                badge.textContent = 'الإشعارات محظورة من المتصفح';
+            } else {
+                badge.textContent = 'في انتظار إذنك';
+            }
+        }
+
+        async function requestNotificationPermission() {
+            if (!('Notification' in window)) {
+                showToast('المتصفح الحالي لا يدعم إشعارات النظام. ستظل التذكيرات داخل الموقع فقط.', 'warning');
+                return;
+            }
+            if (Notification.permission === 'granted') {
+                updateNotificationBadge();
+                showToast('إشعارات مِشوار مسموح بها بالفعل.', 'success');
+                return;
+            }
+            try {
+                const permission = await Notification.requestPermission();
+                updateNotificationBadge();
+                if (permission === 'granted') {
+                    showToast('تم السماح بإشعارات مِشوار بنجاح.', 'success');
+                    triggerSystemNotification('أهلاً بك في مِشوار 🏆', 'هنفكّرك بالمذاكرة وبالأذكار حسب الإعدادات.');
+                } else {
+                    showToast('لم يتم السماح بإشعارات المتصفح. يمكنك تغيير ذلك من إعدادات الموقع في المتصفح.', 'info');
+                }
+            } catch (error) { showToast('تعذر طلب إذن الإشعارات من المتصفح.', 'warning'); }
+        }
+
+        function triggerSystemNotification(title, body) {
+            showToast(`${title}: ${body}`, 'info');
+            if ('Notification' in window && Notification.permission === 'granted') {
+                try { new Notification(title, { body, icon: 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="15" fill="#2563eb"/><path d="M8 58 25 22h14l17 36H8Z" fill="#fff"/><path d="M31 25h3v30h-3z" fill="#fbbf24"/></svg>') }); }
+                catch (error) { console.warn('Notification could not be shown', error); }
+            }
+        }
+
+        function sendTestReminder() {
+            const settings = getReminderSettings();
+            const pending = getAllPendingTasks();
+            const task = pending.find(item => !item.dueDate || item.dueDate <= getLocalDateString());
+            if (task) triggerSystemNotification(`مهمة مذاكرة: ${task.subjectName} 📚`, `${task.title} — ${task.weekLabel}`);
+            else {
+                const message = REMINDER_MESSAGES.find(item => settings.dhikr !== false || !/صلّوا|ذكر|لا تنسَ/.test(item.title)) || REMINDER_MESSAGES[0];
+                triggerSystemNotification(message.title, message.body);
+            }
+        }
+
+        function startPeriodicReminders() {
+            if (reminderTimer) clearInterval(reminderTimer);
+            const settings = getReminderSettings();
+            const minutes = Math.max(15, Number(settings.frequency || 60));
+            reminderTimer = setInterval(() => {
+                const dhikrEnabled = settings.dhikr !== false;
+                let candidates = REMINDER_MESSAGES.filter(message => dhikrEnabled || !/صلّوا|ذكر|لا تنسَ/.test(message.title));
+                if (!candidates.length) candidates = [REMINDER_MESSAGES[0]];
+                const message = candidates[reminderMessageIndex % candidates.length];
+                reminderMessageIndex++;
+                const today = getLocalDateString();
+                const todayTask = getAllPendingTasks().find(task => !task.dueDate || task.dueDate <= today);
+                if (todayTask && reminderMessageIndex % 2 === 1) {
+                    triggerSystemNotification(`مهمتك اليوم: ${todayTask.subjectName} 📖`, `${todayTask.title} — ${todayTask.weekLabel}`);
+                } else {
+                    triggerSystemNotification(message.title, message.body);
+                }
+            }, minutes * 60 * 1000);
+        }
+
+        // =========================================
+        // 8. Tasks Toggle, Persistence & UI Rendering
+        // =========================================
+        function toggleTask(subjectId, taskId) {
+            const subject = subjects.find(s => s.id === subjectId);
+            if (!subject) return;
+            const task = subject.tasks.find(t => t.id === taskId);
+            if (!task) return;
+
+            task.completed = !task.completed;
+            saveSubjects();
+            renderSubjects();
+
+            if (task.completed) {
+                const allDone = subject.tasks.every(t => t.completed);
+                if (allDone) {
+                    showToast(`عاش يا بطل! أنهيت مادة "${subject.name}" بالكامل! 🎉`, 'success');
+                } else {
+                    showToast(`تم إنجاز: ${task.title}`, 'success');
+                }
+            }
+        }
+
+        function deleteSubject(subjectId) {
+            openCustomModal(
+                'حذف جدول المادة',
+                'هل أنت متأكد من حذف جدول هذه المادة بجميع دروسها وواجباتها؟',
+                () => {
+                    subjects = subjects.filter(s => s.id !== subjectId);
+                    saveSubjects();
+                    renderSubjects();
+                    showToast('تم حذف جدول المادة.', 'info');
+                }
+            );
+        }
+
+        function clearAllData() {
+            openCustomModal(
+                'مسح جميع الجداول',
+                'سيتم حذف جميع الجداول الدراسية الحالية نهائياً. هل تريد المتابعة؟',
+                () => {
+                    subjects = [];
+                    saveSubjects();
+                    renderSubjects();
+                    showToast('تم مسح جميع الجداول بنجاح.', 'info');
+                }
+            );
+        }
+
+        function getAllPendingTasks() {
+            const pending = [];
+            subjects.forEach(sub => {
+                sub.tasks.forEach(task => {
+                    if (!task.completed) {
+                        pending.push({
+                            subjectName: sub.name,
+                            title: task.title,
+                            weekLabel: task.weekLabel,
+                            dueDate: task.dueDate || '' 
+                        });
+                    }
+                });
+            });
+            return pending;
+        }
+
+        function saveSubjects() {
+            localStorage.setItem(STORAGE_KEYS.SUBJECTS, JSON.stringify(subjects));
+        }
+
+        function loadState() {
+            try {
+                const rawProfile = localStorage.getItem(STORAGE_KEYS.PROFILE);
+                studentProfile = rawProfile ? JSON.parse(rawProfile) : null;
+
+                const rawSubjects = localStorage.getItem(STORAGE_KEYS.SUBJECTS);
+                subjects = rawSubjects ? JSON.parse(rawSubjects) : [];
+            } catch (e) {
+                studentProfile = null;
+                subjects = [];
+            }
+        }
+
+        function updateStats() {
+            const totalSubjects = subjects.length;
+            let totalTasks = 0;
+            let completedTasks = 0;
+
+            subjects.forEach(sub => {
+                totalTasks += sub.tasks.length;
+                completedTasks += sub.tasks.filter(t => t.completed).length;
+            });
+
+            const pendingTasks = totalTasks - completedTasks;
+            const percent = totalTasks === 0 ? 0 : Math.round((completedTasks / totalTasks) * 100);
+
+            document.getElementById('stat-total-subjects').textContent = totalSubjects;
+            document.getElementById('stat-completed-tasks').textContent = `${completedTasks} / ${totalTasks}`;
+            document.getElementById('stat-pending-tasks').textContent = pendingTasks;
+            document.getElementById('stat-progress-percent').textContent = `${percent}%`;
+
+            const clearBtn = document.getElementById('btn-clear-all');
+            if (totalSubjects > 0) {
+                clearBtn.classList.remove('hidden');
+            } else {
+                clearBtn.classList.add('hidden');
+            }
+        }
+
+        function renderSubjects() {
+            updateStats();
+            const container = document.getElementById('subjects-container');
+
+            if (subjects.length === 0) {
+                container.innerHTML = `
+                    <div class="theme-card rounded-3xl p-8 sm:p-10 text-center space-y-3">
+                        <div class="w-16 h-16 mx-auto rounded-3xl accent-bg-soft accent-text flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-calendar-plus"></i>
+                        </div>
+                        <h3 class="text-lg sm:text-xl font-extrabold">لم تقم بتوليد جدولك بعد</h3>
+                        <p class="text-xs sm:text-sm max-w-md mx-auto" style="color: var(--text-muted);">
+                            اختر المواد من قسم <strong>"خطط لموادك الدراسية"</strong> بالأعلى، وحدد عدد الدروس أو الوحدات والمدة بالأسابيع أو الشهور، وحدد تاريخ البداية، ثم اضغط <strong>"توليد الجدول الذكي"</strong>.
+                        </p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = subjects.map(sub => {
+                const completedCount = sub.tasks.filter(t => t.completed).length;
+                const totalCount = sub.tasks.length;
+                const progress = totalCount === 0 ? 0 : Math.round((completedCount / totalCount) * 100);
+
+                const tasksHtml = sub.tasks.map(task => `
+                    <div onclick="toggleTask('${sub.id}', '${task.id}')" 
+                        class="p-3 rounded-2xl theme-card-secondary flex items-center justify-between gap-3 cursor-pointer hover:opacity-90 transition-all ${task.completed ? 'opacity-60' : ''}">
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 rounded-lg flex items-center justify-center border-2 transition-all ${task.completed ? 'bg-emerald-500 border-emerald-500 text-white' : 'border-slate-400'}">
+                                ${task.completed ? '<i class="fa-solid fa-check text-xs"></i>' : ''}
+                            </div>
+                            <div>
+                                <p class="text-xs sm:text-sm font-bold ${task.completed ? 'line-through' : ''}">
+                                    ${escapeHtml(task.title)}
+                                </p>
+                                <span class="text-[11px] font-semibold" style="color: var(--text-muted);">
+                                    <i class="fa-regular fa-calendar ml-1"></i>${escapeHtml(task.weekLabel || 'موعد غير محدد')}
+                                </span>
+                            </div>
+                        </div>
+                        <span class="text-[11px] font-extrabold px-2.5 py-1 rounded-xl shrink-0 ${task.type === 'واجب' ? 'bg-amber-500/15 text-amber-500' : 'accent-bg-soft accent-text'}">
+                            ${escapeHtml(task.type)}
+                        </span>
+                    </div>
+                `).join('');
+
+                return `
+                    <article class="theme-card rounded-3xl p-5 sm:p-6 space-y-4">
+                        <div class="flex flex-wrap items-start justify-between gap-3">
+                            <div>
+                                <div class="flex items-center gap-2.5 flex-wrap">
+                                    <h3 class="text-lg sm:text-xl font-black">${escapeHtml(sub.name)}</h3>
+                                    <span class="text-xs font-extrabold px-3 py-1 rounded-full" style="background-color: var(--badge-bg); color: var(--badge-text);">
+                                        <i class="fa-solid fa-book-open ml-1"></i>${sub.itemCount} ${sub.unitType} • ${escapeHtml(sub.durationLabel)}
+                                    </span>
+                                </div>
+                                <p class="text-xs mt-1" style="color: var(--text-muted);">
+                                    المنجز: ${completedCount} من ${totalCount} مهمة
+                                </p>
+                                ${sub.startDate && sub.endDate ? `<p class="text-[11px] mt-1 font-semibold accent-text"><i class="fa-regular fa-calendar ml-1"></i>مدة الخطة: من ${escapeHtml(formatArabicDate(sub.startDate))} إلى ${escapeHtml(formatArabicDate(sub.endDate))}</p>` : ''}
+                            </div>
+
+                            <button onclick="deleteSubject('${sub.id}')" 
+                                class="w-9 h-9 rounded-xl text-rose-500 hover:bg-rose-500/10 flex items-center justify-center transition cursor-pointer"
+                                title="حذف المادة">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </button>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div>
+                            <div class="flex justify-between text-xs font-extrabold mb-1.5">
+                                <span style="color: var(--text-secondary);">نسبة التقدم في المادة</span>
+                                <span class="accent-text">${progress}%</span>
+                            </div>
+                            <div class="w-full h-2.5 rounded-full overflow-hidden" style="background-color: var(--bg-main);">
+                                <div class="h-full rounded-full transition-all duration-500" 
+                                     style="width: ${progress}%; background-color: var(--accent-primary);"></div>
+                            </div>
+                        </div>
+
+                        <!-- Tasks & Homework List -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 pt-1 max-h-72 overflow-y-auto pl-1">
+                            ${tasksHtml}
+                        </div>
+                    </article>
+                `;
+            }).join('');
+        }
+
+        // =========================================
+        // 9. Helper Utilities (Toasts, Modal, Security)
+        // =========================================
+        function showToast(message, type = 'info') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            
+            let iconClass = 'fa-bell accent-text';
+            if (type === 'success') iconClass = 'fa-circle-check text-emerald-500';
+            if (type === 'warning') iconClass = 'fa-triangle-exclamation text-amber-500';
+
+            toast.className = 'theme-card pointer-events-auto rounded-2xl p-3.5 shadow-xl flex items-center gap-3 border transform transition-all duration-300 translate-y-2 opacity-0';
+            toast.innerHTML = `
+                <i class="fa-solid ${iconClass} text-lg shrink-0"></i>
+                <p class="text-xs sm:text-sm font-bold leading-snug">${escapeHtml(message)}</p>
+            `;
+
+            container.appendChild(toast);
+            requestAnimationFrame(() => {
+                toast.classList.remove('translate-y-2', 'opacity-0');
+            });
+
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-2');
+                setTimeout(() => toast.remove(), 300);
+            }, 4200);
+        }
+
+        let modalConfirmCallback = null;
+        function openCustomModal(title, message, onConfirm) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-message').textContent = message;
+            modalConfirmCallback = onConfirm;
+            const modal = document.getElementById('custom-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeCustomModal() {
+            const modal = document.getElementById('custom-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            modalConfirmCallback = null;
+        }
+
+        document.getElementById('modal-confirm-btn').addEventListener('click', () => {
+            if (typeof modalConfirmCallback === 'function') {
+                modalConfirmCallback();
+            }
+            closeCustomModal();
+        });
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // =========================================
+        // 10. Bootstrap Application on Load
+        // =========================================
+        window.addEventListener('DOMContentLoaded', () => {
+            initIntroAnimation();
+            loadSavedTheme();
+            renderOnboardingGrades();
+            loadState();
+            updateNotificationBadge();
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            if (studentProfile && studentProfile.name) {
+                showDashboardView();
+            } else {
+                document.getElementById('login-view').classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
